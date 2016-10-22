@@ -1,4 +1,6 @@
-﻿class Player {
+package com.sd.DiceGame;
+
+public class Player {
     private String name=null;
     private int num=0;
     public Player(String name) {
@@ -6,12 +8,13 @@
     }
     public void play() {
         Dice d=new Dice();
-        num=d.roll();
+        d.roll();
+        num = d.getNum();
     }
     public int getNum() {
-	return this.num;
+      return num;
     }
     public String getName() {
-	return this.name;
+      return name;
     }
 }
