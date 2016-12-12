@@ -33,8 +33,14 @@ public class FileRead {
 	}
 	public void fWrite() {
 		Scanner sc1 = new Scanner(System.in);
-		System.out.print("Please enter the satisfaction of the game as a number. ");
-		int sl = sc1.nextInt();
+		int sl = 0;
+		try {
+			System.out.print("Please enter the satisfaction of the game as a integer number. ");
+			sl = sc1.nextInt();
+		}
+		catch (Exception e) {
+			System.out.println("input number!");
+		}
 		Scanner sc2 = new Scanner(System.in);
 		System.out.print("Please enter a comment: ");
 		String c = sc2.nextLine();
